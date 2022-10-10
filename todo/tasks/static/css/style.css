@@ -1,0 +1,54 @@
+body{
+    background-color: #f1f1f1;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+.main-section{
+    border-width: 12px;
+    border-color: #1e1e1e;
+    padding: 30px;
+    margin: 50px;
+}
+.input-field{
+    padding: 4px;
+}
+.form-button{
+    cursor: pointer;
+    padding: 6px;
+    border-width: 0px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    transition: all 0.15s ease 0s;
+}
+.form-button:hover{
+    scale: 105%;
+    background-color: #000000;
+}
+.info-text{
+    font-size: 10px;
+    color: #bdbdbd;
+    padding: 10px;
+}
+.remove-button{
+    cursor: pointer;
+    padding: 5px 8px 3px 8px ;
+    font-size: 14px;
+    background-color: #ff8282;
+}
+.edit-button{
+    cursor: pointer;
+    padding: 5px 8px 3px 8px ;
+    font-size: 14px;
+    background-color: #7896fa;
+}
+.item-title{
+    margin-right: 20px;
+    font-weight: bolder;
+}
+.list-items{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 15px 0 ;
+    padding: 15px;
+    border-bottom: 1px dashed #1e1e1e;
+}
