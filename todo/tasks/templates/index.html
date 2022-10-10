@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %}</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+</head>
+<body>
+    <main class="main-content">
+        <section class="main-section">
+            <h3 class="box-title">
+                Lista de tarefas
+            </h3>
+            <form action="#" class="main-form">
+                <input type="text" name="search" placeholder="Digite uma tarefa" class="input-field">
+                <button class="form-button" >
+                    ADICIONAR
+                </button>
+            </form>
+            <ul class="task-list">
+                <li class="list-items">
+                <span class="item-title">Título da tarefa</span>
+                <div>    
+                    <span><i class="remove-button">Remover</i></span>
+                    <span><i class="edit-button">Editar</i></span>
+                </div>
+                </li>
+            </ul>
+            <footer>
+                <p class="info-text">Site criado por Anthony</p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
