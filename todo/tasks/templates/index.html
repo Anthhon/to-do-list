@@ -6,21 +6,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} {% endblock title %}</title>
+    <title>Lista de tarefas</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
 </head>
 <body>
+
+    <nav class="nav-main">
+        <div class="nav-main-frame">
+            <div>
+                <a class="nav-bar-main-text" href="/">
+                    To Do
+                </a>
+            </div>
+            <div>
+                <a class="nav-bar-info" href="#">
+                    Sobre
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <main class="main-content">
         <section class="main-section">
-            <h3 class="box-title">
-                Lista de tarefas
-            </h3>
             <form action="#" class="main-form">
-                <input type="text" name="search" placeholder="Digite uma tarefa" class="input-field">
+                <input type="text" name="search" placeholder="Pesquisar por uma tarefa" class="input-field">
                 <button class="form-button" >
-                    ADICIONAR
+                    PESQUISAR
                 </button>
             </form>
             <ul class="task-list">
@@ -29,7 +42,11 @@
                 {% for task in tasks %}
                 <li class="list-items">
                 <!-- Para importar importar informações advindas de um modelo é necessário que seja usado um link 'a', e indicar a informação a ser solicitada de acordo com os nomes do próprio modelo -->
-                <span class="item-title"><a href="/task/{{task.id}}">{{task.title}}</a></span>
+                <span class="item-title">
+                    <a href="/task/{{task.id}}">
+                        {{task.title}}
+                    </a>
+                </span>
                 <div>    
                     <span><i class="remove-button">Remover</i></span>
                     <span><i class="edit-button">Editar</i></span>
@@ -37,10 +54,12 @@
                 </li>
                 {% endfor %}
             </ul>
-            <footer>
-                <p class="info-text">Site criado por Anthony</p>
-            </footer>
         </section>
+        
+        <footer>
+            <p class="info-text">Site criado por Anthony</p>
+        </footer>
+    
     </main>
 </body>
 </html>

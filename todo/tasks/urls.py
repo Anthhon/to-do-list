@@ -7,5 +7,5 @@ Esse arquivo sempre será chamado pelo 'todo/urls.py', e tem como função retor
 urlpatterns = [
     path('', TaskList, name='tasklist'),
 
-    path('task/<int:id>', taskView, name='your-name'),
+    path('task/<int:id>', taskView, name='task-view'),
 ]

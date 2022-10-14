@@ -20,4 +20,4 @@ Get_object_or_404 arguments -> Modelo que está será usado, e uma primary key q
 '''
 def taskView(request, id):
     task = get_object_or_404(Task, pk=id)
-    return render(request, 'tasks.html', {'tasks': task})
+    return render(request, 'task.html', {'task': task})
