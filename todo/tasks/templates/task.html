@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+</head>
+<body>
+
+    <nav class="nav-main">
+        <div class="nav-main-frame">
+            <div>
+                <a class="nav-bar-main-text" href="/">
+                    To Do
+                </a>
+            </div>
+            <div>
+                <a class="nav-bar-info" href="#">
+                    Sobre
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="task-section">
+            <span class="task-info">
+                Título da tarefa
+            </span>
+            <h3 class="task-title">
+                {{task.title}}
+            </h3>
+            <span class="task-info">
+                Descrição da tarefa
+            </span>
+            <p class="task-description">
+                {{task.description}}
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p class="info-text">Site criado por Anthony</p>
+    </footer>
+
+</body>
+</html>
