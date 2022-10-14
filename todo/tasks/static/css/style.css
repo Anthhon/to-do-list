@@ -52,3 +52,7 @@ body{
     padding: 15px;
     border-bottom: 1px dashed #1e1e1e;
 }
+a {
+    color: #1e1e1e;
+    text-decoration: none;
+}

@@ -24,13 +24,18 @@
                 </button>
             </form>
             <ul class="task-list">
+                
+                <!-- A função for irá criar um modelo para cada tarefa citada dentro do banco de dados -->
+                {% for task in tasks %}
                 <li class="list-items">
-                <span class="item-title">Título da tarefa</span>
+                <!-- Para importar importar informações advindas de um modelo é necessário que seja usado um link 'a', e indicar a informação a ser solicitada de acordo com os nomes do próprio modelo -->
+                <span class="item-title"><a href="/task/{{task.id}}">{{task.title}}</a></span>
                 <div>    
                     <span><i class="remove-button">Remover</i></span>
                     <span><i class="edit-button">Editar</i></span>
                 </div>
                 </li>
+                {% endfor %}
             </ul>
             <footer>
                 <p class="info-text">Site criado por Anthony</p>

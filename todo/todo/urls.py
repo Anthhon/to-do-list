@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+'''
+Esta pequena lista tem como função, redirecionar o usuário a cada request feita dentro do site, usando o método 'include' do própriuo do Django é capaz chapar pelo arquivo de URL 'tasks/urls.py' que finaliza o trabalho redirecionando o usuário
+'''
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', include('tasks.urls')),
