@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Task
@@ -61,3 +62,8 @@ def editTask(request, id):
             return render(request, 'editask.html', {'form': form, 'task': task})
     else:
         return render(request, 'editask.html', {'form': form, 'task': task})
+
+def deleteTask(request, id):
+    task = get_object_or_404(Task, pk=id)
+    task.delete()
+    return redirect('/')

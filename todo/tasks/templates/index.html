@@ -37,7 +37,6 @@
                 <input type="text" name="search" placeholder="Pesquisar por uma tarefa" class="input-field">
             </form>
             <ul class="task-list">
-                
                 <!-- A função for irá criar um modelo para cada tarefa citada dentro do banco de dados -->
                 <!-- Para importar importar informações advindas de um modelo é necessário que seja usado um link 'a', e indicar a informação a ser solicitada de acordo com os nomes do próprio modelo -->
                 {% for task in tasks %}
@@ -48,8 +47,13 @@
                         </a>
                     </span>
                     <div>    
-                        <a href="#"><i class="remove-button">Remover</i>
-                        <a href="editask/{{task.id}}"><span><i class="edit-button">Editar</i></span></a>
+                        <a href="deletetask/{{task.id}}">
+                            <i class="remove-button">Remover</i>
+                        <a href="editask/{{task.id}}">
+                            <span>
+                                <i class="edit-button">Editar</i>
+                            </span>
+                        </a>
                     </div>
                 </li>
                 {% endfor %}
