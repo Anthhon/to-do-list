@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar tarefas</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+</head>
+<body>
+
+    <nav class="nav-main">
+        <div class="nav-main-frame">
+            <div>
+                <a class="nav-bar-main-text" href="/">
+                    To Do
+                </a>
+            </div>
+            <div>
+                <a class="nav-bar-info" href="#">
+                    Sobre
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!--
+        O formulário abaixo, possui o método "POST" que é utilizado
+        para adicionar informações no banco de dados.
+    
+        O 'csrf_token' é um método de autenticação de requests usado para
+        evitar que hackers possam roubar ou enviar informações falsas
+        pelo seu servidor
+
+        Esse 'form.as_p' serve apenas para printar ao usuário o formulário
+        e as suas informações previamente definidas
+        -->
+        <form method="POST" class="newstask-form-main">
+            <h3><strong>Adicione a sua nova tarefa</strong></h3>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Criar Tarefa" class="submit-button">
+        </form>
+    </main>
+
+    <footer>
+        <p class="info-text">Site criado por Anthony</p>
+    </footer>
+
+</body>
+</html>
