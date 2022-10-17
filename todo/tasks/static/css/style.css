@@ -40,6 +40,10 @@ a {
     padding: 30px;
     margin: 50px;
 }
+.main-form{
+    display: flex;
+    justify-content: space-around;
+}
 .input-field{
     padding: 4px 50px 4px 4px;
 }
@@ -50,18 +54,17 @@ a {
     background-color: #1e1e1e;
     color: #ffffff;
     transition: all 0.15s ease 0s;
+    text-decoration: none;
 }
 .form-button:hover{
     scale: 105%;
 }
 .remove-button{
-    cursor: pointer;
     padding: 5px 8px 3px 8px ;
     font-size: 14px;
     background-color: #ff8282;
 }
 .edit-button{
-    cursor: pointer;
     padding: 5px 8px 3px 8px ;
     font-size: 14px;
     background-color: #7896fa;
@@ -72,15 +75,13 @@ a {
 }
 .list-items{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 15px 0 15px 0 ;
     padding: 15px;
     border-bottom: 1px dashed #1e1e1e;
 }
 .info-text{
-    position: fixed;
-    bottom: 10px;
-    left: 40%;
+    text-align: center;
     font-size: 10px;
     color: #bdbdbd;
     padding: 10px;
@@ -108,4 +109,11 @@ a {
     font-size: small;
     font-weight: 200;
     color: #a5a5a5;
+}
+
+
+
+.newstask-form-main > p{
+    display: flex;
+    flex-direction: column;
 }

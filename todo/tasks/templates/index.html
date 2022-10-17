@@ -30,27 +30,27 @@
 
     <main class="main-content">
         <section class="main-section">
-            <form action="#" class="main-form">
-                <input type="text" name="search" placeholder="Pesquisar por uma tarefa" class="input-field">
+            <form action="newtask/" class="main-form">
                 <button class="form-button" >
-                    PESQUISAR
+                    ADICIONAR
                 </button>
+                <input type="text" name="search" placeholder="Pesquisar por uma tarefa" class="input-field">
             </form>
             <ul class="task-list">
                 
                 <!-- A função for irá criar um modelo para cada tarefa citada dentro do banco de dados -->
+                <!-- Para importar importar informações advindas de um modelo é necessário que seja usado um link 'a', e indicar a informação a ser solicitada de acordo com os nomes do próprio modelo -->
                 {% for task in tasks %}
                 <li class="list-items">
-                <!-- Para importar importar informações advindas de um modelo é necessário que seja usado um link 'a', e indicar a informação a ser solicitada de acordo com os nomes do próprio modelo -->
-                <span class="item-title">
-                    <a href="/task/{{task.id}}">
-                        {{task.title}}
-                    </a>
-                </span>
-                <div>    
-                    <span><i class="remove-button">Remover</i></span>
-                    <span><i class="edit-button">Editar</i></span>
-                </div>
+                    <span class="item-title">
+                        <a href="/task/{{task.id}}">
+                            {{task.title}}
+                        </a>
+                    </span>
+                    <div>    
+                        <a href="#"><i class="remove-button">Remover</i>
+                        <a href="editask/{{task.id}}"><span><i class="edit-button">Editar</i></span></a>
+                    </div>
                 </li>
                 {% endfor %}
             </ul>
